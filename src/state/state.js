@@ -27,6 +27,12 @@ export const robotsState = atom({
   effects: [localStorageEffect('robots')],
 })
 
+export const battlesState = atom({
+  key: 'battleState',
+  default: [],
+  effects: [localStorageEffect('battles')],
+})
+
 export const modalState = atom({
   key: 'modalState',
   default: {

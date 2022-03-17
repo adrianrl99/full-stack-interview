@@ -1,0 +1,35 @@
+.RobotCard {
+  width: 100%;
+  max-width: 150px;
+  height: 100%;
+  max-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.RobotCard_icon {
+  font-size: 5rem;
+}
+
+.RobotCard_attack_defense {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.RobotCard_attack h4 {
+  color: var(--green);
+}
+
+.RobotCard_defense h4 {
+  color: var(--red);
+}
+
+.RobotCard span {
+  display: flex;
+  gap: 6px;
+}

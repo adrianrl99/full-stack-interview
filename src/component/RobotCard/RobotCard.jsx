@@ -10,7 +10,7 @@ import RobotForm from '../RobotForm/RobotForm'
 import RobotConfirmDelete from '../RobotConfirmDelete'
 
 const RobotCard = robot => {
-  const { id, name, color, attack, defense } = robot
+  const { name, color, attack, defense } = robot
   const [, setModal] = useRecoilState(modalState)
 
   const handleEdit = () =>

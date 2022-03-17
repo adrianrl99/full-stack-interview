@@ -1,0 +1,12 @@
+.Navbar {
+  display: flex;
+  gap: 8px;
+}
+
+.Navbar > * {
+  text-decoration: none;
+}
+
+.Navbar button {
+  color: var(--foreground);
+}

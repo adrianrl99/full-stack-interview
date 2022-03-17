@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import { useRecoilState } from 'recoil'
+import Navbar from '../component/Navbar'
 import Modal from '../lib/Modal'
 import { modalState } from '../state/state'
 
@@ -13,6 +14,7 @@ const AppLayout = () => {
 
   return (
     <div className={styles.AppLayout}>
+      <Navbar />
       <Outlet />
       <Modal
         open={modal.open}

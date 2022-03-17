@@ -1,6 +1,9 @@
 .AppLayout {
   display: flex;
-  justify-content: center;
+  align-items: center;
   padding: 32px;
+  padding-top: 8px;
   flex-grow: 1;
+  gap: 16px;
+  flex-direction: column;
 }

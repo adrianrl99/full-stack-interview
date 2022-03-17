@@ -1,0 +1,23 @@
+.BattlesPage {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.BattlesPage h1 {
+  text-align: center;
+}
+
+.BattlesPage header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.BattleList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
