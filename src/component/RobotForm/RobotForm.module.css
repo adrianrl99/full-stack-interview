@@ -1,0 +1,30 @@
+.RobotForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 32px;
+  padding: 48px 16px;
+}
+
+.RobotForm form {
+  width: 100%;
+  max-width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.RobotForm_attack_defense {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  width: calc(50% - 8px);
+}
+
+input.RobotForm_color {
+  padding: 2px;
+  width: 100%;
+}

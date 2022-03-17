@@ -1,0 +1,45 @@
+:global html.dark {
+}
+
+html {
+  --primary: var(--blue);
+  --secondary: var(--yellow);
+
+  --background: var(--normalBlack);
+  --foreground: var(--normalWhite);
+
+  --normalBlack: #181a1f;
+  --brightBlack: #5c6370;
+
+  --normalWhite: #abb2bf;
+  --brightWhite: #ffffff;
+
+  --red: #e06c75;
+  --green: #98c379;
+  --yellow: #d19a66;
+  --blue: #61afef;
+  --magenta: #c678dd;
+  --cyan: #56b6c2;
+
+  --shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25),
+    2px 2px 4px -2px rgba(0, 0, 0, 0.25);
+  --shadow-inset: inset 1px 1px 4px 1px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 4px -2px rgba(0, 0, 0, 0.25);
+
+  /* Snackbar palette */
+  --snackbar-primary: var(--blue);
+  --snackbar-primary-contrast-text: var(--background);
+  --snackbar-secondary: var(--yellow);
+  --snackbar-secondary-contrast-text: var(--background);
+  --snackbar-success: var(--green);
+  --snackbar-success-contrast-text: var(--background);
+  --snackbar-info: var(--blue);
+  --snackbar-info-contrast-text: var(--background);
+  --snackbar-warning: var(--yellow);
+  --snackbar-warning-contrast-text: var(--background);
+  --snackbar-error: var(--red);
+  --snackbar-error-contrast-text: var(--background);
+  --snackbar-shadow: var(--shadow);
+  --snackbar-progress-color: var(--magenta);
+  --snackbar-progress-shadow: var(--shadow-inset);
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name": "Robot 1",
+    "color": "red",
+    "attack": 1,
+    "defense": 1
+  },
+  {
+    "id": "2",
+    "name": "Robot 2",
+    "color": "orange",
+    "attack": 5,
+    "defense": 3
+  },
+  {
+    "id": "3",
+    "name": "Robot 3",
+    "color": "green",
+    "attack": 2,
+    "defense": 8
+  },
+  {
+    "id": "4",
+    "name": "Robot 4",
+    "color": "magenta",
+    "attack": 3,
+    "defense": 1
+  },
+  {
+    "id": "5",
+    "name": "Robot 5",
+    "color": "cyan",
+    "attack": 2,
+    "defense": 5
+  },
+  {
+    "id": "6",
+    "name": "Robot 6",
+    "color": "blue",
+    "attack": 4,
+    "defense": 2
+  }
+]

@@ -1,0 +1,6 @@
+.AppLayout {
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  flex-grow: 1;
+}

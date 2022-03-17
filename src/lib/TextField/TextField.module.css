@@ -1,0 +1,30 @@
+.TextField {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.TextField input {
+  height: 40px;
+
+  padding: 8px;
+
+  background-color: transparent;
+  color: var(--foreground);
+
+  box-shadow: var(--shadow-inset);
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.TextField_label {
+  display: flex;
+  gap: 4px;
+}
+
+.TextField_label_asterisk {
+  color: var(--red);
+  font-size: 12px;
+}

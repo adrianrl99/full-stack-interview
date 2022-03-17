@@ -1,0 +1,7 @@
+.HelperText {
+  font-size: 14px;
+}
+
+.HelperText_error {
+  color: var(--red);
+}

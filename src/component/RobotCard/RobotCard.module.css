@@ -1,0 +1,67 @@
+.RobotCard {
+  background-color: transparent;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.RobotCard_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.RobotCard_inner > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.RobotCard:hover .RobotCard_inner {
+  transform: rotateY(180deg);
+}
+
+.RobotCard_front,
+.RobotCard_back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.RobotCard_back {
+  transform: rotateY(180deg);
+}
+
+.RobotCard_icon {
+  font-size: 6rem;
+}
+
+.RobotCard_attack_defense {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.RobotCard_attack h4 {
+  color: var(--green);
+}
+
+.RobotCard_defense h4 {
+  color: var(--red);
+}
+
+.RobotCard span {
+  display: flex;
+  gap: 6px;
+}
+
+.RobotCard_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
