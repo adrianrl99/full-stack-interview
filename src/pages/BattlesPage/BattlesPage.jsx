@@ -11,17 +11,21 @@ const BattlesPage = () => {
 
   useLayoutEffect(() => {
     repo.battle.getBattles().then(async battles => {
-      let robots = await Promise.all(
-        battles
-          .map(battle => battle.robots)
-          .flat()
-          .sort()
-          .reduce(
-            (acc, curr) => (acc.includes(curr) ? acc : [...acc, curr]),
-            [],
-          )
-          .map(repo.robot.getRobot),
+      let robots = (
+        await Promise.allSettled(
+          battles
+            .map(battle => battle.robots)
+            .flat()
+            .sort()
+            .reduce(
+              (acc, curr) => (acc.includes(curr) ? acc : [...acc, curr]),
+              [],
+            )
+            .map(repo.robot.getRobot),
+        )
       )
+        .filter(r => r.status === 'fulfilled')
+        .map(r => r.value)
 
       setRobots(robots)
       setBattles(battles)

@@ -5,13 +5,15 @@ import random from '../../lib/random'
 import round from '../../lib/round'
 import HP from '../HP/HP'
 import RobotFightCard from '../RobotFightCard'
-import { modalState } from '../../state'
+import { modalState, selectedRobotsState } from '../../state'
 import styles from './RobotFight.module.css'
 import { useRecoilState } from 'recoil'
 import { repo } from '../../repository'
 
 const RobotFight = ({ robots }) => {
   const [, setModal] = useRecoilState(modalState)
+  const [, setSelected] = useRecoilState(selectedRobotsState)
+
   const timer = useRef()
   const hpTimer = useRef()
   const hpRef = useRef([100, 100])
@@ -83,11 +85,20 @@ const RobotFight = ({ robots }) => {
         })
         .then(() => {
           setTimeout(() => {
+            setSelected([])
             setModal({ open: false, className: '', render: null })
           }, 1000)
         })
     }
-  }, [battle, handleStart, hps, isBattleFinished, robots, setModal])
+  }, [
+    battle,
+    handleStart,
+    hps,
+    isBattleFinished,
+    robots,
+    setModal,
+    setSelected,
+  ])
 
   useEffect(() => removeInterval, [removeInterval])
 
