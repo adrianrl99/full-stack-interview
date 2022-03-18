@@ -15,16 +15,16 @@ const BattleCard = battle => {
   )
 
   const renderSide = robot => (
-    <div key={robot.id} className={styles.BattleCard_side}>
+    <div key={robot?.id} className={styles.BattleCard_side}>
       <h3
         className={classes({
-          [styles.BattleCard_side_winner]: battle.win === robot.id,
-          [styles.BattleCard_side_looser]: battle.win !== robot.id,
+          [styles.BattleCard_side_winner]: battle.win === robot?.id,
+          [styles.BattleCard_side_looser]: battle.win !== robot?.id,
         })}
       >
-        {battle.win === robot.id ? 'Winer' : 'Looser'}
+        {robot ? (battle.win === robot.id ? 'Winer' : 'Looser') : 'Deleted'}
       </h3>
-      <RobotBattleCard {...robot} />
+      <RobotBattleCard win={battle.win === robot?.id} {...robot} />
     </div>
   )
 

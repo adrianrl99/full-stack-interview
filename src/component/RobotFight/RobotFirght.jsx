@@ -9,13 +9,13 @@ import { modalState } from '../../state'
 import styles from './RobotFight.module.css'
 import { useRecoilState } from 'recoil'
 import { repo } from '../../repository'
-import { v4 as uuid } from 'uuid'
 
 const RobotFight = ({ robots }) => {
   const [, setModal] = useRecoilState(modalState)
   const timer = useRef()
   const hpTimer = useRef()
   const hpRef = useRef([100, 100])
+  const [lastDamaged, setLastDamaged] = useState('')
   const [battle, setBattle] = useState(false)
   const [hps, setHP] = useState([100, 100])
   const renderInfo = () => <div className={styles.RobotFight_info}>VS</div>
@@ -48,11 +48,14 @@ const RobotFight = ({ robots }) => {
     let damage = Math.round(
       robots[attacker].attack * random(0, 3.5) - robots[defender].defense,
     )
-    if (damage < 0) damage = 0
-    if (damage <= newHp[defender]) newHp[defender] -= damage
-    else newHp[defender] = 0
+    if (damage > 0) {
+      if (damage <= newHp[defender]) newHp[defender] -= damage
+      else newHp[defender] = 0
 
-    hpRef.current = newHp
+      hpRef.current = newHp
+      setHP(newHp)
+      setLastDamaged(defender)
+    }
   }, [robots])
 
   const handleStart = useCallback(() => {
@@ -69,16 +72,6 @@ const RobotFight = ({ robots }) => {
       timer.current = setInterval(calculateDamage, [500])
     }
   }, [battle, calculateDamage, removeInterval, robots])
-
-  useEffect(() => {
-    removeHpTimerInterval()
-
-    if (battle && !hpTimer.current) {
-      setInterval(() => {
-        setHP(hpRef.current)
-      }, 500)
-    }
-  }, [battle])
 
   useEffect(() => {
     if (battle && isBattleFinished) {
@@ -108,7 +101,10 @@ const RobotFight = ({ robots }) => {
       >
         {isBattleFinished ? hp > 0 ? 'Winner' : 'Looser' : <HP value={hp} />}
       </h4>
-      <RobotFightCard {...robot} />
+      <RobotFightCard
+        damaged={robots.indexOf(robot) === lastDamaged}
+        {...robot}
+      />
     </div>
   )
 
