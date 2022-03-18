@@ -21,3 +21,11 @@ button {
   border: none;
   padding: 0;
 }
+
+body {
+  overflow: hidden;
+}
+
+body:not(.disable-scroll) {
+  overflow-y: auto;
+}

@@ -21,3 +21,8 @@
   align-items: center;
   gap: 16px;
 }
+
+.HomePage_buttons {
+  display: flex;
+  gap: 16px;
+}

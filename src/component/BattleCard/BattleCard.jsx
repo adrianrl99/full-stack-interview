@@ -10,10 +10,7 @@ const BattleCard = battle => {
   const robotsStateValues = useRecoilValue(robotsState)
 
   const robots = useMemo(
-    () =>
-      robotsStateValues
-        .map(r => battle.robots.includes(r.id) && r)
-        .filter(Boolean),
+    () => robotsStateValues.filter(r => battle.robots.includes(r.id)),
     [battle.robots, robotsStateValues],
   )
 

@@ -18,10 +18,6 @@ export const mockBattleRepository = {
     return battle
   },
   setBattle: async battle => {
-    const battleExists = battles.find(b => b.name === battle.name)
-    if (battleExists) {
-      throw new Error(BattleRepositoryErrors.AlreadyExists)
-    }
     const newBattle = { id: uuid(), ...battle }
     battles = [...battles, newBattle]
     return newBattle

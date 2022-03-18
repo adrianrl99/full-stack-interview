@@ -41,3 +41,8 @@ export const modalState = atom({
     className: '',
   },
 })
+
+export const selectedRobotsState = atom({
+  key: 'selectedRobotsState',
+  default: [],
+})

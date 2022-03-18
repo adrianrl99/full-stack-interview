@@ -1,4 +1,4 @@
-.RobotBattleCard {
+.RobotFightCard {
   width: 100%;
   max-width: 150px;
   height: 100%;
@@ -9,11 +9,11 @@
   gap: 8px;
 }
 
-.RobotBattleCard_icon {
+.RobotFightCard_icon {
   font-size: 5rem;
 }
 
-.RobotBattleCard_attack_defense {
+.RobotFightCard_attack_defense {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,15 +21,15 @@
   font-size: 14px;
 }
 
-.RobotBattleCard_attack h4 {
+.RobotFightCard_attack h4 {
   color: var(--green);
 }
 
-.RobotBattleCard_defense h4 {
+.RobotFightCard_defense h4 {
   color: var(--red);
 }
 
-.RobotBattleCard span {
+.RobotFightCard span {
   display: flex;
   gap: 6px;
 }

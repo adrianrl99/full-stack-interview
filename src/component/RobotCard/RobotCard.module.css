@@ -65,3 +65,14 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+
+.RobotCard_dot {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}
+
+.RobotCard_dot_disabled {
+  cursor: not-allowed;
+}

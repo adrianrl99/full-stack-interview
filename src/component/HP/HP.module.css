@@ -1,0 +1,15 @@
+.HP {
+  color: var(--red);
+}
+
+.HP_high {
+  color: var(--green);
+}
+
+.HP_medium {
+  color: var(--info);
+}
+
+.HP_low {
+  color: var(--yellow);
+}
